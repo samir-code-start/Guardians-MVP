@@ -6,8 +6,3 @@ pydantic-settings
 opencv-python-headless
 Pillow
 ImageHash
-torch
-transformers
-firebase-admin
-google-cloud-aiplatform
-google-cloud-firestore

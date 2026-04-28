@@ -22,7 +22,10 @@ from services.firestore_client import log_threat
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
-UPLOAD_DIR = "guardians_uploads"
+UPLOAD_DIR = os.environ.get(
+    "UPLOAD_DIR",
+    "/tmp/guardians_uploads" if os.environ.get("VERCEL") else "guardians_uploads",
+)
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 
