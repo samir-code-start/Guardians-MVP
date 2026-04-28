@@ -1,0 +1,30 @@
+.git
+.vercel
+.agents
+.git-local-backup
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+gurdians-frames-*.json
+
+frontend/node_modules
+frontend/.next
+frontend/.git-local-backup
+
+backend
+
+test videos
+*.mp4
+
+AI Alignment & Execution Instructions (STRICT).md
+Agent Skill Definition — Dual-Layer Sports Media Protection System (MVP).md
+Development Workflow Rules.md
+bugs.md
+fallback.md
+fix.md
+frontend_fix.md
+ideal_input.md

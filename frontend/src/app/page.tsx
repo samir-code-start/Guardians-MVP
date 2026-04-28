@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+
 export default function Dashboard() {
   // Ctrl+Shift+D trigger for mock data
   const [useMockData, setUseMockData] = useState(false);
@@ -62,7 +64,7 @@ export default function Dashboard() {
       });
       
       try {
-        const backendUrl = `http://${window.location.hostname}:8000/api/v1/verify/log_threat`;
+        const backendUrl = `${API_BASE_URL}/api/v1/verify/log_threat`;
         await fetch(backendUrl, {
           method: 'POST',
           headers: {
@@ -117,7 +119,7 @@ export default function Dashboard() {
     formData.append('suspicious_video', suspiciousFile);
 
     try {
-      const backendUrl = `http://${window.location.hostname}:8000/api/v1/verify/compare`;
+      const backendUrl = `${API_BASE_URL}/api/v1/verify/compare`;
       const res = await fetch(backendUrl, {
         method: 'POST',
         body: formData,
